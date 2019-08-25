@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Soma dos quadrados</title>
+        <script>
+          function calcular()
+          {
+            numero = parseInt(prompt("Apartir de qual número você quer começar?",""))
+            soma = 0
+            document.write("Soma dos quadrados dos próximos 9 numeros naturais<br><br>")
+              for (i = 0; i < 10; i++)
+              {
+                quadrado = parseInt(Math.pow(numero, 2))
+                soma += parseInt(quadrado)
+                document.write("Número atual: "+numero+" | Quadrado do número atual: "+quadrado+" | Soma parcial:  "+soma+"<br><br>")
+                numero += 1;
+              }
+            document.write("<br>Aperte F5 para escolher outro número")
+            }
+        </script>
+  </head>
+  <body>
+    <h1 style="text-align:center">Soma dos quadrados</h1>
+    <p style="text-align:center">Sabe quanto é a soma dos quadrados dos 10 primeiros números?<br>
+        E a soma dos quadros de 11 até 20?<br>
+        Não sabe?<br>
+        Eu também não, mas clica no botão abaixo e digite o número que deve partir!</p>
+    <form>
+      <p style="text-align:center"><input type="button" value="Calcular a soma" onclick="calcular()"></p>
+    </form>
+  </body>
+</html>

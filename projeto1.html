@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Erros cometidos</title>
+  </head>
+    <script>
+      function calcular()
+        {
+          semana = document.forms["quantidade"].semanas.value;
+          projeto = document.forms["quantidade"].projetos.value;
+          total_projetos = parseInt(semana) * parseInt(projeto)
+          total_erros = Math.pow(2, parseInt(total_projetos - 1))
+          s = 0
+          p = 1
+          erros = 0
+          alert("Você errou um total de: "+total_erros+" vezes")
+            for(s = 0; s < total_projetos; s++)
+            {
+              erros = Math.pow(2, s)
+
+              if (s == total_erros - 1)
+              {
+                document.write("Erros no projeto "+p+": "+erros)
+              }
+              else
+              {
+                document.write("Erros no projeto "+p+": "+erros+"<br>")
+              }
+                p++;
+            }
+            document.write("<br>Aperte F5 para errar mais!")
+          }
+    </script>
+  <body>
+    <h1 style="text-align:center">Pronto para saber seu desempenho?</h1>
+    <form name="quantidade" action="/action_page.php">
+      <p style="text-align:center">Durante quantas semanas você programou?&nbsp;&nbsp;<input type="number" min = "0" max="999" name="semanas"value=""></p>
+      <p style="text-align:center">Quanto projetos você fez em cada semana?&nbsp;&nbsp;<input type="number" min = "0" max="999" name="projetos"value=""></p>
+      <p style="text-align:center"><input type="button" value="Calcular erros" onclick="calcular()"></p>
+    </forms>
+  </body>
+</html>

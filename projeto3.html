@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Recomendações para bolsas</title>
+        <script>
+          function calcular()
+          {
+              document.write("Resultado das inscrições!<br><br>")
+              for (i = 0; i < 10; i++)
+              {
+                nome = prompt("Insira seu nome:","")
+                media = parseFloat(prompt("Insira sua média:",""))
+                  if (media >= 9)
+                  {
+                    document.write(nome+", você foi altamente recomendado, com a média: "+media+"<br><br>")
+                  }
+                  else if (media >= 8 && media < 9)
+                  {
+                    document.write(nome+", você foi fortemente recomendado, com a média: "+media+"<br><br>")
+                  }
+                  else if (media >= 7 && media < 8)
+                  {
+                    document.write(nome+", você foi recomendado, com a média: "+media+"<br><br>")
+                  }
+                  else
+                  {
+                    document.write(nome+", você não foi recomendado, com a média: "+media+"<br><br>")
+                  }
+              }
+              document.write("<br>Aperte F5 para cadastrar outros alunos")
+          }
+      </script>
+  </head>
+  <body>
+    <h1 style="text-align:center">Concorra a uma bolsa aqui na UFAL!!!</h1>
+    <form>
+      <p style="text-align:center"><input type="button" value="Concorrer" onclick="calcular()"></p>
+    </form>
+  </body>
+</html>
